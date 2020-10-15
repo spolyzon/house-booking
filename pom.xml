@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.spolyzon</groupId>
-	<artifactId>house-review</artifactId>
+	<artifactId>house-booking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>house-review</name>
+	<name>house-booking</name>
 	<description>A House Review Platform using SpringBoot</description>
 
 	<properties>
