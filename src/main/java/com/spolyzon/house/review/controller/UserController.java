@@ -38,7 +38,7 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getUserById(@PathVariable long id) {
+    public ResponseEntity<User> getUserById(@PathVariable long id) {
         LOGGER.info("Retrieving user by id {}", id);
         return userRepository.findById(id)
                 .map(ResponseEntity::ok)
