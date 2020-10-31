@@ -1,8 +1,17 @@
 package com.spolyzon.house.review.domain.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Objects;
 
+@Entity
 public class Unit implements Model {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+
     private final String title;
     private final String region;
     private final int price; // Todo: Change it to a Money type
