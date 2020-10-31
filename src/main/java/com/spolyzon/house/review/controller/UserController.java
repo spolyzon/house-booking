@@ -52,10 +52,10 @@ public class UserController {
                 .body(userRepository.save(userDTO.getUser()));
     }
 
-    @DeleteMapping
-    public ResponseEntity<Void> deleteUser(@RequestBody long userId) {
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteUser(@PathVariable long id) {
         LOGGER.info("Deleting user...");
-        userRepository.deleteById(userId);
+        userRepository.deleteById(id);
         return ResponseEntity.ok().build();
     }
 }

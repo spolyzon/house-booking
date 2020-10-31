@@ -30,6 +30,10 @@ public class Unit implements Model {
         this.description = description;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public String getTitle() {
         return title;
     }

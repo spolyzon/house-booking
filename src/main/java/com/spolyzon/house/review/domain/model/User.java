@@ -8,8 +8,6 @@ import java.util.Objects;
 
 @Entity
 public class User implements Model {
-    public static final User INVALID_USER = new User(-1L, "invalid", "invalid");
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
