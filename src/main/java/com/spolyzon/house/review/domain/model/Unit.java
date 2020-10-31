@@ -12,10 +12,12 @@ public class Unit implements Model {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    private final String title;
-    private final String region;
-    private final int price; // Todo: Change it to a Money type
+    private String title;
+    private String region;
+    private int price; // Todo: Change it to a Money type
     private String description;
+
+    public Unit() { }
 
     public Unit(String title, String region, int price) {
         this(title, region, price, null);

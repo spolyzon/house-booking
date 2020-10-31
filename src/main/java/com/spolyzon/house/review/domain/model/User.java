@@ -8,15 +8,28 @@ import java.util.Objects;
 
 @Entity
 public class User implements Model {
+    public static final User INVALID_USER = new User(-1L, "invalid", "invalid");
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private final String username;
-    private final String password;
+    private  String username;
+    private  String password;
+
+    public User() { }
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    private User(long id, String username, String password) {
+        this(username, password);
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getUsername() {
